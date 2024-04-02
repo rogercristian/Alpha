@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -244081608952858825}
   - component: {fileID: 168783969977373302}
   m_Layer: 0
-  m_Name: p_test
+  m_Name: p_test 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,9 +158,57 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: e11aa4d3-8951-4190-9840-b0e58c7c7735
     m_ActionName: Player/View[/XInputControllerWindows/select]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7831e4bd-c41f-4c2f-9ff0-6a2299933047
+    m_ActionName: Player1/Moving[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4766e163-08c1-440c-bcbb-816238a0fec9
+    m_ActionName: Player1/A[/XInputControllerWindows/buttonSouth,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0bb39817-d15c-491f-a737-0249ae42abc8
+    m_ActionName: Player1/B[/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3a771564-5e02-4a2e-806f-541c71e350ca
+    m_ActionName: Player1/X[/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 210bdcb5-9359-4028-bda6-e2a40b2ca1fd
+    m_ActionName: Player1/Y[/XInputControllerWindows/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6982ae15-f2d2-4a9d-a42b-47939b7d4f5d
+    m_ActionName: Player1/RB[/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 96bbd283-2f92-41d9-b8dc-24944f1f78f4
+    m_ActionName: Player1/LB[/XInputControllerWindows/leftShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 763c63d0-852e-40d5-a6ea-220110f267c0
+    m_ActionName: Player1/LT[/XInputControllerWindows/leftTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e8e3e962-7085-4f39-86f3-2aa26bd33b68
+    m_ActionName: Player1/RT[/XInputControllerWindows/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b37701ac-2336-4334-95ef-9472cb225c55
+    m_ActionName: Player1/DPAD[/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 399a2288-7a15-4c3f-93b2-a10eecabe37c
+    m_ActionName: Player1/Menu[/XInputControllerWindows/start,/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 59ed5f64-8120-4b85-bee1-fa36a9745bb5
+    m_ActionName: Player1/View[/XInputControllerWindows/select]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 1663998840333993028, guid: 967892f27763c3141995647ffdfa9185,
     type: 3}

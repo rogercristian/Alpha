@@ -32,7 +32,7 @@ public class MovingPlayer : MonoBehaviour
 
         Jumping();
 
-        //  Debug.Log(Physics.Raycast(transform.position, Vector3.down, groundedDistance));
+        Debug.Log(Physics.Raycast(transform.position, Vector3.down, groundedDistance));
         Debug.DrawRay(transform.position, Vector3.down, Color.red, groundedDistance);
     }
     bool IsGrounded()
@@ -55,6 +55,7 @@ public class MovingPlayer : MonoBehaviour
     }
     void MoveCharacter()
     {
+
         direction = input.x * Vector3.right + input.y * Vector3.forward;
         direction.Normalize();
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
@@ -64,6 +65,7 @@ public class MovingPlayer : MonoBehaviour
         // Changes the height position of the player..
         if (inputManager.GetSubmitPressed() && IsGrounded())
         {
+           // rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
             rb.velocity = Vector3.up * jumpHeight;
         }
     }

@@ -10,7 +10,8 @@ public class RepositionPlayer : MonoBehaviour
     {
         id = PlayerInputManager.instance.playerCount;
         GameEvents.Instance.Reposition(id);
-        GameEvents.Instance.SeekPlayer();        
+        GameEvents.Instance.SeekPlayer();
+        //id = PlayerInputManager.instance.playerCount;
     }
    
 }

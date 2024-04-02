@@ -1,5 +1,6 @@
 using Cinemachine;
 using UnityEngine;
+
 public class FindPlayer : MonoBehaviour
 {
     CinemachineTargetGroup targetGroup;
