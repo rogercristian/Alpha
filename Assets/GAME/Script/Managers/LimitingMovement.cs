@@ -57,6 +57,7 @@ public class LimitingMovement : MonoBehaviour
         {
            
             if (currentPlayer2Pos.x < currentPlayer1Pos.x )
+
             {
                 currentPlayer2Pos.x = Mathf.Lerp(currentPlayer2Pos.x, currentPlayer1Pos.x, interpolationTime);
             }
