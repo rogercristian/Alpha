@@ -27,22 +27,19 @@ public class GameManager : MonoBehaviour
 
         leaveAction.Enable();
         leaveAction.performed += context => LeaveAction(context);
-
     }
 
     void OnPlayerJoined(PlayerInput playerInput)
     {
         playerList.Add(playerInput);
 
-
         if (PlayerJoinedGame != null)
         {
             PlayerJoinedGame(playerInput);
         }
-
     } 
     private void JoinAction(InputAction.CallbackContext context)
-    {
+    {      
         PlayerInputManager.instance.JoinPlayerFromActionIfNotAlreadyJoined(context);
     }
     private void LeaveAction(InputAction.CallbackContext context)
