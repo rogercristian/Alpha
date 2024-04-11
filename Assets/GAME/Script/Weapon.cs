@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Weapon : MonoBehaviour
 {
@@ -15,10 +16,14 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         float buttonRt = inputManager.GetButtonRtPressed();
+        Gamepad.current.SetMotorSpeeds(0f, 0f);
+
         if (buttonRt > 0.1f || inputManager.GetInteractPressed())
         {
+            Gamepad.current.SetMotorSpeeds(0f, .5f);
             GameObject go = Instantiate(projetil, projetilTransform.position, projetilTransform.rotation);
 
         }
+
     }
 }
