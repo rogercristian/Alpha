@@ -119,7 +119,19 @@ MonoBehaviour:
     m_ActionId: 2701094b-90e2-4451-aa79-aa2884321bdf
     m_ActionName: Player/A[/XInputControllerWindows/buttonSouth,/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -244081608952858825}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: InteractButtonPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 51bfa3a7-ba12-48b1-8943-80701214e1f4
     m_ActionName: Player/B[/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
@@ -143,7 +155,19 @@ MonoBehaviour:
     m_ActionId: 9210776d-6252-456b-a101-de7b96e1277d
     m_ActionName: Player/LT[/XInputControllerWindows/leftTrigger]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -244081608952858825}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: ButtonRtPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: bbac6aea-2a6e-4214-bf7b-bc943cdc35c0
     m_ActionName: Player/RT[/XInputControllerWindows/rightTrigger]
   - m_PersistentCalls:
@@ -158,54 +182,6 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: e11aa4d3-8951-4190-9840-b0e58c7c7735
     m_ActionName: Player/View[/XInputControllerWindows/select]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7831e4bd-c41f-4c2f-9ff0-6a2299933047
-    m_ActionName: Player1/Moving[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4766e163-08c1-440c-bcbb-816238a0fec9
-    m_ActionName: Player1/A[/XInputControllerWindows/buttonSouth,/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0bb39817-d15c-491f-a737-0249ae42abc8
-    m_ActionName: Player1/B[/XInputControllerWindows/buttonEast]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3a771564-5e02-4a2e-806f-541c71e350ca
-    m_ActionName: Player1/X[/XInputControllerWindows/buttonWest]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 210bdcb5-9359-4028-bda6-e2a40b2ca1fd
-    m_ActionName: Player1/Y[/XInputControllerWindows/buttonNorth]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6982ae15-f2d2-4a9d-a42b-47939b7d4f5d
-    m_ActionName: Player1/RB[/XInputControllerWindows/rightShoulder]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 96bbd283-2f92-41d9-b8dc-24944f1f78f4
-    m_ActionName: Player1/LB[/XInputControllerWindows/leftShoulder]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 763c63d0-852e-40d5-a6ea-220110f267c0
-    m_ActionName: Player1/LT[/XInputControllerWindows/leftTrigger]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e8e3e962-7085-4f39-86f3-2aa26bd33b68
-    m_ActionName: Player1/RT[/XInputControllerWindows/rightTrigger]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b37701ac-2336-4334-95ef-9472cb225c55
-    m_ActionName: Player1/DPAD[/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 399a2288-7a15-4c3f-93b2-a10eecabe37c
-    m_ActionName: Player1/Menu[/XInputControllerWindows/start,/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 59ed5f64-8120-4b85-bee1-fa36a9745bb5
-    m_ActionName: Player1/View[/XInputControllerWindows/select]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -221,6 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5038614292778937656}
+  - component: {fileID: 915312970406805893}
   - component: {fileID: 2434523261177787741}
   - component: {fileID: 4623592498625436529}
   m_Layer: 7
@@ -239,12 +216,26 @@ Transform:
   m_GameObject: {fileID: 1786257796556684760}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.26, z: 0.45}
-  m_LocalScale: {x: 0.49, y: 0.39, z: 0.67}
+  m_LocalPosition: {x: 0, y: 0.26, z: 0.758}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.49}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6392487063943792751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &915312970406805893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786257796556684760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92dd598a86588984588c152a225bdc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projetil: {fileID: 493451203355720252, guid: 1b438cfebe7633842a1a4c07f3e7cf19, type: 3}
+  projetilTransform: {fileID: 5038614292778937656}
 --- !u!33 &2434523261177787741
 MeshFilter:
   m_ObjectHideFlags: 0
