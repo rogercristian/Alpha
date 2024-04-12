@@ -39,7 +39,7 @@ public class LimitingMovement : MonoBehaviour
     {
         movingPlayers = FindObjectsOfType<MovingPlayer>();
         float screemX = cam.pixelWidth /100f;
-        Debug.Log(screemX);
+       // Debug.Log(screemX);
         if (movingPlayers.Length - 1 == 0) { return; }
         Vector3 currentPlayer2Pos = movingPlayers[1].transform.position;
         Vector3 currentPlayer1Pos = movingPlayers[0].transform.position;
@@ -47,7 +47,7 @@ public class LimitingMovement : MonoBehaviour
        // float distance = Vector3.Distance(movingPlayers[0].transform.position, movingPlayers[1].transform.position);
         float distance = Vector3.Distance(new Vector3(currentPlayer1Pos.x,0,0),
             new Vector3(currentPlayer2Pos.x, 0, 0));
-        Debug.Log(distance);
+       // Debug.Log(distance);
         maxX = 10f;
         minX = 10f;
         Rigidbody rb2 = movingPlayers[1].GetComponent<Rigidbody>();
