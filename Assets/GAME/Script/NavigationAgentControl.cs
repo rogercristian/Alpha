@@ -16,8 +16,8 @@ public class NavigationAgentControl : MonoBehaviour
     {
         target = FindObjectsOfType<MovingPlayer>();
 
-        if(target.Length == 0) return;
-        // targetIndex = Random.Range(0, 2);
+        if (target.Length == 0) return;
+
         int rand = Random.Range(0, target.Length);
         agent.destination = target[rand].transform.position;
         Debug.Log(rand);

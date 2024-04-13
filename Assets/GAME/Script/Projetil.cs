@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projetil : MonoBehaviour
@@ -16,6 +14,17 @@ public class Projetil : MonoBehaviour
     void Update()
     {
         body.velocity = transform.forward * speed;
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, .5f);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent<IDamageable>(out var item))
+        {
+            item.TakeDamage();
+            Destroy(gameObject);
+        }
+    }
+
+
 }

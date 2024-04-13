@@ -22,9 +22,10 @@ public class SpawnPoint : MonoBehaviour
 
             if (Moving != null)
             {
-                Debug.Log(playerTransform);
+              //  Debug.Log(playerTransform);
                 Moving.transform.position = playerTransform;
-                Debug.Log("depois de atualizar a posição " + playerTransform);
+                Moving.transform.rotation = transform.rotation;
+              //  Debug.Log("depois de atualizar a posição " + playerTransform);
               //  Destroy(gameObject, 5);
 
             }
