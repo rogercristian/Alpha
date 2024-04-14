@@ -32,7 +32,7 @@ public class MovingPlayer : MonoBehaviour
 
         Jumping();
 
-        //  Debug.Log(Physics.Raycast(transform.position, Vector3.down, groundedDistance));
+        Debug.Log(Physics.Raycast(transform.position, Vector3.down, groundedDistance));
         Debug.DrawRay(transform.position, Vector3.down, Color.red, groundedDistance);
     }
     bool IsGrounded()
