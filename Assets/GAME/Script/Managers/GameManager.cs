@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
 
     public List<PlayerInput> playerList = new List<PlayerInput>();
-    
+
     [SerializeField] InputAction joinAction;
     [SerializeField] InputAction leaveAction;
 
@@ -22,26 +22,35 @@ public class GameManager : MonoBehaviour
         if (instamce != null) Destroy(gameObject);
         instamce = this;
 
+
         joinAction.Enable();
         joinAction.performed += context => JoinAction(context);
 
         leaveAction.Enable();
         leaveAction.performed += context => LeaveAction(context);
     }
+    private void OnDestroy()
+    {
+        joinAction.performed -= context => JoinAction(context);
+        leaveAction.performed -= context => LeaveAction(context);
 
+    }
     void OnPlayerJoined(PlayerInput playerInput)
     {
+
         playerList.Add(playerInput);
 
         if (PlayerJoinedGame != null)
         {
             PlayerJoinedGame(playerInput);
         }
-    } 
+    }
     private void JoinAction(InputAction.CallbackContext context)
-    {      
+    {
+
         PlayerInputManager.instance.JoinPlayerFromActionIfNotAlreadyJoined(context);
     }
+
     private void LeaveAction(InputAction.CallbackContext context)
     {
         if (playerList.Count > 1)
@@ -69,6 +78,6 @@ public class GameManager : MonoBehaviour
         }
 
         Destroy(playerInput.transform.gameObject);
-    }    
+    }
 
 }

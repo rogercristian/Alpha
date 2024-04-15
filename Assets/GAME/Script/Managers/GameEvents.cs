@@ -1,12 +1,9 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+[DefaultExecutionOrder(-1)]
 public class GameEvents : MonoBehaviour
 {
-    public static GameEvents Instance;
-
+    public static GameEvents Instance { get; private set; }
     private void Awake() => Instance = this;
 
     public event Action<int> OnReposition;

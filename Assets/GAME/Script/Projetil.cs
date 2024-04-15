@@ -8,12 +8,8 @@ public class Projetil : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        body.velocity = transform.forward * speed;
+       // body.velocity = transform.forward * speed;
+       body.AddForce(transform.forward * speed , ForceMode.Impulse);
         Destroy(gameObject, .5f);
     }
 
