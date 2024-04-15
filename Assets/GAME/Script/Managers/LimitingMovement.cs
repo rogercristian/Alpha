@@ -34,7 +34,7 @@ public class LimitingMovement : MonoBehaviour
     void Distancia()
     {
         movingPlayers = FindObjectsOfType<MovingPlayer>();
-        float screemX = cam.pixelWidth / 100f;
+       
         // Debug.Log(screemX);
         if (movingPlayers.Length - 1 == 0) { return; }
         Vector3 currentPlayer1Pos = movingPlayers[0].transform.position;

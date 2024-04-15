@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     {
         if (instamce != null) Destroy(gameObject);
         instamce = this;
-
+       
 
         joinAction.Enable();
         joinAction.performed += context => JoinAction(context);
@@ -31,7 +31,9 @@ public class GameManager : MonoBehaviour
     }
     private void OnDestroy()
     {
+        joinAction.Disable();
         joinAction.performed -= context => JoinAction(context);
+        leaveAction.Disable();
         leaveAction.performed -= context => LeaveAction(context);
 
     }
@@ -76,7 +78,7 @@ public class GameManager : MonoBehaviour
         {
             PlayerLeftGame(playerInput);
         }
-
+       
         Destroy(playerInput.transform.gameObject);
     }
 

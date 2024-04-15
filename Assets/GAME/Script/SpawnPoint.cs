@@ -29,6 +29,12 @@ public class SpawnPoint : MonoBehaviour
               //  Destroy(gameObject, 5);
 
             }
+          
         }
+    }
+    private void Update()
+    {
+        playerTransform = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
     }
 }

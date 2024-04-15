@@ -1,16 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class RepositionPlayer : MonoBehaviour
 {
-    [SerializeField] private int id ;
+    [SerializeField] private int id;
     private void OnEnable()
     {
-        id = PlayerInputManager.instance.playerCount;
+        //  id = PlayerInputManager.instance.playerCount;
+        PlayerStats playerStats = GetComponentInChildren<PlayerStats>();
+        PlayerInput input = GetComponent<PlayerInput>();
+        id = input.playerIndex;
+      //  id = playerStats.PlayerID();
         GameEvents.Instance.Reposition(id);
-        GameEvents.Instance.SeekPlayer();        
+        GameEvents.Instance.SeekPlayer();
     }
-   
+
 }
