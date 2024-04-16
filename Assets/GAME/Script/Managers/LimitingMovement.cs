@@ -2,17 +2,14 @@ using UnityEngine;
 
 public class LimitingMovement : MonoBehaviour
 {
-   // [SerializeField] float minX = 10f;
     [SerializeField] float maxDistance = 19f;
     [SerializeField] float interpolationTime = 0.005f;
 
     [SerializeField] MovingPlayer[] movingPlayers;
     bool validate = false;
-    Camera cam;
+
     private void OnEnable()
     {
-        cam = FindAnyObjectByType<Camera>();
-
         GameEvents.Instance.OnReposition += Handler_OnReposition;
     }
     private void OnDisable()
@@ -34,7 +31,7 @@ public class LimitingMovement : MonoBehaviour
     void Distancia()
     {
         movingPlayers = FindObjectsOfType<MovingPlayer>();
-       
+
         // Debug.Log(screemX);
         if (movingPlayers.Length - 1 == 0) { return; }
         Vector3 currentPlayer1Pos = movingPlayers[0].transform.position;
@@ -44,7 +41,7 @@ public class LimitingMovement : MonoBehaviour
         float distance = Vector3.Distance(new Vector3(currentPlayer1Pos.x, 0, 0),
             new Vector3(currentPlayer2Pos.x, 0, 0));
         // Debug.Log(distance);
-        
+
         Rigidbody rb1 = movingPlayers[0].GetComponent<Rigidbody>();
         Rigidbody rb2 = movingPlayers[1].GetComponent<Rigidbody>();
 

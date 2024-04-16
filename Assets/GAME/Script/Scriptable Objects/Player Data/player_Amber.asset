@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b02d93e32662142af9151e624d63ee, type: 3}
   m_Name: player_Amber
   m_EditorClassIdentifier: 
-  id: 2
+  playerImage: {fileID: 21300000, guid: dc66163f933144b4196f953495e802a8, type: 3}
+  id: 1
   playerName: Amber
   level: 0
   playerPrefab: {fileID: 2484646319792730570, guid: f194882f72cccd54889d4578d3d9cd32,

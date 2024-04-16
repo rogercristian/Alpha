@@ -12,7 +12,6 @@ public class SpawnPoint : MonoBehaviour
     private void OnDestroy()
     {
         GameEvents.Instance.OnReposition -= Handler_OnReposition;
-
     }
     private void Handler_OnReposition(int id)
     {
@@ -22,14 +21,10 @@ public class SpawnPoint : MonoBehaviour
 
             if (Moving != null)
             {
-              //  Debug.Log(playerTransform);
                 Moving.transform.position = playerTransform;
                 Moving.transform.rotation = transform.rotation;
-              //  Debug.Log("depois de atualizar a posição " + playerTransform);
-              //  Destroy(gameObject, 5);
-
             }
-          
+
         }
     }
     private void Update()

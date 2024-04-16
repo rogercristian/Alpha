@@ -23,10 +23,10 @@ public class Weapon : MonoBehaviour
         if (buttonRt > 0.1f || inputManager.GetInteractPressed())
         {
             shootCountDown -= Time.deltaTime;
+                Gamepad.current.SetMotorSpeeds(0f, .5f);
             if (shootCountDown <= 0)
             {
                 Instantiate(projetil, firePoint.position, firePoint.rotation);
-                Gamepad.current.SetMotorSpeeds(0f, .5f);
 
                 shootCountDown = fireRate;
 

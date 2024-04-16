@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
-[CreateAssetMenu(fileName = "player", menuName = "ScriptableObjects/player")]
+[CreateAssetMenu(fileName = "player", menuName = "ScriptableObject/player")]
 public class PlayerData : ScriptableObject
 {
-    public Image playerImage;
+    public Sprite playerImage;
     public int id;
     public string playerName;
     public int level;

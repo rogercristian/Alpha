@@ -1,14 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerSkinSelection : MonoBehaviour
 {
-    [SerializeField] GameObject[] playerSkin;
-    PlayerInput input;
+    [SerializeField] List<PlayerStats> stats = new List<PlayerStats>();
+
     private void OnEnable()
     {
         GameEvents.Instance.OnReposition += Handle_OnReposition;
-        input = GetComponent<PlayerInput>();
+
     }
     private void OnDestroy()
     {
@@ -17,25 +17,16 @@ public class PlayerSkinSelection : MonoBehaviour
     }
     private void Handle_OnReposition(int id)
     {
-        //PlayerStats playerStats = GetComponentInChildren<PlayerStats>();
-        //id = playerStats.PlayerID();
-     
-       // id = input.playerIndex;
-        //if (playerStats != null)
-        //{
+        var skinStats = stats.Find(skin => !skin.gameObject.activeSelf);
+        if (skinStats != null)
+        {
+            // skinStats.gameObject.SetActive(false);
 
-        //    playerSkin[0].SetActive(false);
-        //    playerSkin[1].SetActive(true);
-        //}
-        if (id == 0)
-        {
-            playerSkin[0].SetActive(true);
-            playerSkin[1].SetActive(false);
-        }
-        else if (id == 1)
-        {
-            playerSkin[0].SetActive(false);
-            playerSkin[1].SetActive(true);
+            foreach (var playerStats in stats)
+            {
+                stats[id].gameObject.SetActive(true);
+
+            }
         }
     }
 }

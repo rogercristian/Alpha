@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1671511351789081739}
   - component: {fileID: 7854582822883885371}
   - component: {fileID: 5504191829603158981}
+  - component: {fileID: 986483200526722743}
   - component: {fileID: 2221835327389940045}
   - component: {fileID: 310743345614032002}
   m_Layer: 0
@@ -59,8 +60,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7051ade187187d45aa4d8ef1f89b427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxDistance: 19
   interpolationTime: 0.009
   movingPlayers: []
+--- !u!114 &986483200526722743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5618560364303373361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3d5fda4d1b5d449b7917d88f11f9b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2221835327389940045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,57 +87,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707277c27839b1441abea3bed20383ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerList: []
-  joinAction:
-    m_Name: Join
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: d3701408-b91d-486d-8345-a37e2a5f2df4
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 4f7b3a90-3e1a-45ac-b4a4-10df3363bd63
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Join
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 74a433b9-32f7-42fc-bbf1-c6bf1cd43712
-      m_Path: <Keyboard>/space
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Join
-      m_Flags: 0
-    m_Flags: 0
-  leaveAction:
-    m_Name: Leave
-    m_Type: 0
-    m_ExpectedControlType: Button
-    m_Id: 28d11f11-6702-48cf-a32c-1cc043acbadc
-    m_Processors: 
-    m_Interactions: Hold
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: e217d8f9-588d-4cf1-8a3e-c3c4903e5484
-      m_Path: <Gamepad>/select
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Leave
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 845e22be-8b95-401b-82f9-52ad6f6d38b3
-      m_Path: <Keyboard>/backspace
-      m_Interactions: Hold
-      m_Processors: 
-      m_Groups: 
-      m_Action: Leave
-      m_Flags: 0
-    m_Flags: 0
 --- !u!114 &310743345614032002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,10 +118,27 @@ MonoBehaviour:
       m_Id: 2e8a7689-ff6c-4194-a080-8d41e8911d16
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings: []
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 48a33d80-af09-4e27-9a43-bc75f5eaaad4
+        m_Path: <Keyboard>/1
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 981134fc-e9aa-4150-9672-3f769bcff176
+        m_Path: <Gamepad>/start
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
       m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 1191966555069978833, guid: 932a910d8d54d214390efa1469978607,
+    m_Reference: {fileID: -2801967225720444795, guid: bbbf1a27a8b0a54419ff1242a63b4519,
+      type: 3}
+  m_PlayerPrefab: {fileID: 1191966555069978833, guid: 7321620249092654f8e20978635615ea,
     type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
