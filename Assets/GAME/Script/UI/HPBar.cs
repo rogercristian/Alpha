@@ -23,8 +23,4 @@ public class HPBar : MonoBehaviour
         root.SetActive(!hpManager.IsFullHP());
     }
 
-    void Update()
-    {
-        
-    }
 }
