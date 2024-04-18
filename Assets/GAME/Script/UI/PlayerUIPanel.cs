@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PlayerUIPanel : MonoBehaviour
 {
     [SerializeField] TMP_Text playerName;
-   // [SerializeField] PlayerData playerData;
+   // [SerializeField] CharacterData playerData;
     PlayerStats playerStats;
     [SerializeField] TMP_Text level;
     [SerializeField] Image photo;

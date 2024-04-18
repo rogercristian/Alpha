@@ -4,6 +4,7 @@ public class Projetil : MonoBehaviour
 {
     Rigidbody body;
     [SerializeField] float speed = 10f;
+    [SerializeField] int damageAmout = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +16,11 @@ public class Projetil : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<IDamageable>(out var item))
+        if (other.TryGetComponent<Damage>(out var damage))
         {
-            item.TakeDamage();
-            Destroy(gameObject);
+            damage.hpManager.TakeDamage(damageAmout);
         }
+            Destroy(gameObject);
     }
 
 

@@ -42,3 +42,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: lifebar
+    uniqueID: 526831993
+    locked: 0

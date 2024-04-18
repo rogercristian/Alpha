@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 3271.9204, g: 3005.014, b: 3469.3325, a: 1}
+  m_IndirectSpecularColor: {r: 3236.5845, g: 2944.1877, b: 3309.436, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -563,6 +563,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Target Group
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155373532903228923, guid: 0798b7d214fa87b4c82dee37d379624c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7698410654233168143, guid: 0798b7d214fa87b4c82dee37d379624c,
         type: 3}
@@ -1100,7 +1105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1633793509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1176,6 +1181,7 @@ GameObject:
   - component: {fileID: 1823688465}
   - component: {fileID: 1823688468}
   - component: {fileID: 1823688469}
+  - component: {fileID: 1823688470}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1393,7 +1399,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
@@ -1420,6 +1426,21 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1823688470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823688464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb323811c09ec64eb8e0688385dae8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOne: {fileID: 0}
+  offset: {x: 0, y: 3, z: -15}
+  smoothSpeed: 2
 --- !u!1 &2013410473
 GameObject:
   m_ObjectHideFlags: 1
@@ -1476,86 +1497,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: joinAction.m_Name
-      value: Join
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: leaveAction.m_Name
-      value: Leave
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: joinAction.m_SingletonActionBindings.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: leaveAction.m_SingletonActionBindings.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: joinAction.m_SingletonActionBindings.Array.data[0].m_Id
-      value: ebd4d525-cb4d-4278-9bac-f6aef5564428
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: joinAction.m_SingletonActionBindings.Array.data[1].m_Id
-      value: aed3762d-3590-49f9-9cd4-55e5b83e430e
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: leaveAction.m_SingletonActionBindings.Array.data[0].m_Id
-      value: e103240d-8398-4265-a2d8-33e530292cd8
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: leaveAction.m_SingletonActionBindings.Array.data[1].m_Id
-      value: 02b81bb4-7b58-46bf-bee9-6f89a0acd63e
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: joinAction.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Keyboard>/1
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: joinAction.m_SingletonActionBindings.Array.data[1].m_Path
-      value: <Gamepad>/start
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: leaveAction.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Keyboard>/backspace
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: leaveAction.m_SingletonActionBindings.Array.data[1].m_Path
-      value: <Gamepad>/select
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: joinAction.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Join
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: joinAction.m_SingletonActionBindings.Array.data[1].m_Action
-      value: Join
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: leaveAction.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Leave
-      objectReference: {fileID: 0}
-    - target: {fileID: 986483200526722743, guid: d9b243268f41a3f4b908b172cd52752e,
-        type: 3}
-      propertyPath: leaveAction.m_SingletonActionBindings.Array.data[1].m_Action
-      value: Leave
-      objectReference: {fileID: 0}
     - target: {fileID: 1671511351789081739, guid: d9b243268f41a3f4b908b172cd52752e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1722,6 +1663,11 @@ PrefabInstance:
     - target: {fileID: 1882033502273034710, guid: 1642bb721b5bfcf4baaab872e9d80e8e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062669468433211964, guid: 1642bb721b5bfcf4baaab872e9d80e8e,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3766760828807126839, guid: 1642bb721b5bfcf4baaab872e9d80e8e,

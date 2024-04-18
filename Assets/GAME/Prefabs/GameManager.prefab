@@ -75,6 +75,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3d5fda4d1b5d449b7917d88f11f9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerList: []
+  joinAction:
+    m_Name: Join
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 8804d18a-843d-40be-ae8d-d7a0b380ef26
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: ebd4d525-cb4d-4278-9bac-f6aef5564428
+      m_Path: <Keyboard>/1
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Join
+      m_Flags: 0
+    - m_Name: 
+      m_Id: aed3762d-3590-49f9-9cd4-55e5b83e430e
+      m_Path: <Gamepad>/start
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Join
+      m_Flags: 0
+    m_Flags: 0
+  leaveAction:
+    m_Name: Leave
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2b39d136-564b-42c0-a840-a18b61723ef7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: e103240d-8398-4265-a2d8-33e530292cd8
+      m_Path: <Keyboard>/backspace
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Leave
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 02b81bb4-7b58-46bf-bee9-6f89a0acd63e
+      m_Path: <Gamepad>/select
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Leave
+      m_Flags: 0
+    m_Flags: 0
 --- !u!114 &2221835327389940045
 MonoBehaviour:
   m_ObjectHideFlags: 0
