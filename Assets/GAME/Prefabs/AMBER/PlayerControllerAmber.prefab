@@ -112,6 +112,8 @@ GameObject:
   - component: {fileID: 9139520645690343143}
   - component: {fileID: 2976522410742045307}
   - component: {fileID: 264977317468032068}
+  - component: {fileID: 6461125573067210319}
+  - component: {fileID: -6568335683766233410}
   m_Layer: 7
   m_Name: PlayerControllerAmber
   m_TagString: Untagged
@@ -220,6 +222,32 @@ MonoBehaviour:
   level: 0
   sprite: {fileID: 21300000, guid: dc66163f933144b4196f953495e802a8, type: 3}
   hp: 100
+--- !u!114 &6461125573067210319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508079901051000184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b2eeffb23d9482458050ce584957367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: 419a2105406506c40a87a98face5eb82, type: 2}
+--- !u!114 &-6568335683766233410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508079901051000184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb64b251db13fe48bfa0269b2075c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpManager: {fileID: 6461125573067210319}
 --- !u!1001 &1657724267676637132
 PrefabInstance:
   m_ObjectHideFlags: 0
