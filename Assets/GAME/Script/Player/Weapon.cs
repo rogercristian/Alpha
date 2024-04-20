@@ -18,12 +18,12 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         float buttonRt = inputManager.GetButtonRtPressed();
-        Gamepad.current.SetMotorSpeeds(0f, 0f);
+        Gamepad.current?.SetMotorSpeeds(0f, 0f);
 
         if (buttonRt > 0.1f || inputManager.GetInteractPressed())
         {
             shootCountDown -= Time.deltaTime;
-                Gamepad.current.SetMotorSpeeds(0f, .5f);
+                Gamepad.current?.SetMotorSpeeds(0f, .5f);
             if (shootCountDown <= 0)
             {
                 Instantiate(projetil, firePoint.position, firePoint.rotation);
